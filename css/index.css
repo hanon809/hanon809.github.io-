@@ -128,7 +128,7 @@ li {
 li a {
     color: #E4F7EB;
     text-shadow: 4px 4px 4px rgba(79, 158, 123, 0.8);
-    font-size: 50px;
+    font-size: 3rem;
     font-family: "Caveat", serif;
     font-weight: 700;
     transition: .4s;
@@ -215,7 +215,7 @@ li a:hover {
     background-color: #FFE479;
     border-radius: 50px;
     border: 1px solid #000000;
-    font-size: 20px;
+    font-size: 1.5rem;
     transition: .4s;
 }
 
@@ -267,13 +267,13 @@ h2 {
     margin-bottom: -10px;
     font-family: "Caveat", serif;
     font-weight: 700;
-    font-size: 70px;
+    font-size: 4.5rem;
     line-height: 1;
 }
 
 /* タイトルの小文字 */
 .h2 span {
-    font-size: 20px;
+    font-size: 1.8rem;
 }
 
 /* 作品 */
@@ -323,12 +323,12 @@ h2 {
 
 /* 作成年 */
 .year {
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 /* 作品名 */
 .work-name {
-    font-size: 30px;
+    font-size: 1.8rem;
 }
 
 /* プロフィール --------------------------------------------------------------- */
