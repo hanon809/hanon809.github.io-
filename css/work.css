@@ -124,7 +124,7 @@
 
 /* 作成年 */
 .year {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 /* 作品名 */
@@ -145,12 +145,12 @@
 /* 作品概要 */
 .overview1 {
     margin-bottom: 1rem;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     line-height: 1.8;
 }
 
 .overview2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     line-height: 1.8;
 }
 
