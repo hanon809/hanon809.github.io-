@@ -1,0 +1,866 @@
+@charset "utf-8";
+
+/* 基本要素の設定------------------------------------------------------------ */
+/* Google Fontから */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kiwi+Maru:wght@300;400;500&family=Noto+Serif+JP:wght@200..900&family=Sawarabi+Mincho&family=Zen+Maru+Gothic:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kiwi+Maru:wght@300;400;500&family=Klee+One&family=Noto+Serif+JP:wght@200..900&family=Sawarabi+Mincho&family=Zen+Maru+Gothic:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Klee One", serif;
+    color: #393939;
+}
+
+/* 共通 ------------------------------------------------------------- */
+/* 背景 */
+body {
+    position: relative;
+    background-image: url(../images/doodad.png);
+    background-size: auto;
+}
+
+/* フェードイン */
+.fadein {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Loading画面 ------------------------------------------------------------ */
+#splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: #6FBF8F;
+    text-align: center;
+    color: #393939;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+    width: 400px;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ヘッダー----------------------------------------------------------------- */
+#header-wrapper {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+/* 点線 */
+.hero-line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 98%;
+    height: 96vh;
+    margin: auto;
+    border-radius: 10px;
+    border: 10px double #E4F7EB;
+}
+
+/* ナビ */
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100vh;
+    background-color: #6FBF8F;
+
+}
+
+.header-nav {
+    margin: 200px 0;
+}
+
+li {
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+    text-align: center;
+    line-height: .7;
+}
+
+li a {
+    color: #E4F7EB;
+    text-shadow: 4px 4px 4px rgba(79, 158, 123, 0.8);
+    font-size: 50px;
+    font-family: "Caveat", serif;
+    font-weight: 700;
+    transition: .4s;
+}
+
+li a:hover {
+    color: #FFE479;
+}
+
+/* ハンバーガーボタンのスタイル */
+.openbtn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 101;
+    width: 45px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.openbtn span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #E4F7EB;
+    border: .5px solid #393939;
+    transition: all 0.4s;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    transform: translateY(15px) rotate(45deg);
+}
+
+.openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+    transform: translateY(-15px) rotate(-45deg);
+}
+
+/* ヒーローエリア ---------------------------------------------------------- */
+#hero-area {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/hero.JPEG);
+    background-position: left;
+    background-size: cover;
+}
+
+/* ヒーローエリアに重ねる */
+.kasaneru {
+    position: relative;
+    width: 75%;
+}
+
+/* ヒーローエリアに重ねる文字 */
+.kasaneru img {
+    position: absolute;
+    width: 500px;
+    bottom: 5%;
+    left: 5%;
+}
+
+.sp-logo {
+    display: none;
+}
+
+/* メインコンテンツ共通 ------------------------------------------------------------ */
+/* 背景の破線囲み */
+.background-line {
+    margin: 0;
+    padding: 70px 30px;
+    border: 10px double #E4F7EB;
+    border-radius: 20px;
+}
+
+/* view more */
+.more {
+    width: 240px;
+    background-color: #FFE479;
+    border-radius: 50px;
+    border: 1px solid #000000;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.more-display {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: 0 auto;
+    padding: 7px 0;
+}
+
+.more a {
+    color: #393939;
+}
+
+.more:hover {
+    background-color: #E4F7EB;
+    border: 1px solid #4F9E7B;
+}
+
+.more img {
+    width: 25px;
+    aspect-ratio: 1/1;
+}
+
+/* work ----------------------------------------------------------------- */
+#work {
+    width: 1000px;
+    margin: 150px auto 0 auto;
+    padding: 20px;
+    background: #6FBF8F;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* more中央寄せ */
+.display-center {
+    margin: 0 auto;
+}
+
+/* タイトル */
+.h2 {
+    margin-bottom: 50px;
+    text-align: center;
+    color: #393939;
+}
+
+h2 {
+    margin-bottom: -10px;
+    font-family: "Caveat", serif;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 1;
+}
+
+/* タイトルの小文字 */
+.h2 span {
+    font-size: 20px;
+}
+
+/* 作品 */
+.work-item {
+    margin-bottom: 100px;
+}
+
+/* displayで横並び */
+.display {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 320px;
+}
+
+/* デザイン(SPあり) */
+.pc-img01 {
+    width: auto;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sp-img01 {
+    width: auto;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* デザイン(SPなし) */
+.pc-img02 {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 作品詳細 */
+.work-note {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* 作成年 */
+.year {
+    font-size: 20px;
+}
+
+/* 作品名 */
+.work-name {
+    font-size: 30px;
+}
+
+/* プロフィール --------------------------------------------------------------- */
+#profile {
+    width: 1000px;
+    margin: 150px auto 200px auto;
+    padding: 20px;
+    background: #6FBF8F;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile-img {
+    width: 320px;
+    aspect-ratio: 1/1;
+    background-image: url(../images/photo.JPEG);
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(79, 158, 123, 0.5);
+}
+
+.profile-note {
+    width: 520px;
+    padding: 40px 0;
+}
+
+.my-name {
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.my-name span {
+    font-size: 30px;
+}
+
+.profile-more {
+    font-size: 30px;
+}
+
+/* more 右寄せ */
+.display-right {
+    margin-left: auto;
+}
+
+/* フッター-------------------------------------------------------------------- */
+.footer-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#footer {
+    width: 100%;
+    height: auto;
+    background-color: #393939;
+    font-size: 17px;
+}
+
+.small-text {
+    padding: 50px;
+    text-align: center;
+    font-size: 15px;
+    color: #E4F7EB;
+}
+
+/* 背景の図形 ------------------------------------------------- */
+.background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -100;
+}
+
+.circle01 {
+    position: absolute;
+    top: 1300px;
+    left: 20px;
+    z-index: -10;
+    width: 300px;
+    aspect-ratio: 1/1;
+    background-color: #FFE479;
+    border-radius: 50%;
+}
+
+.circle02 {
+    position: absolute;
+    top: 1800px;
+    right: 20px;
+    z-index: -10;
+    width: 400px;
+    aspect-ratio: 1/1;
+    background-color: #BFECD6;
+    border-radius: 50%;
+}
+
+.background-img01 {
+    position: absolute;
+    top: 600px;
+    right: 0;
+    z-index: -10;
+    width: 800px;
+    height: auto;
+}
+
+.background-img02 {
+    position: absolute;
+    bottom: 700px;
+    left: 0;
+    z-index: -10;
+    width: 500px;
+    height: auto;
+}
+
+.background-img03 {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    z-index: -10;
+    width: 800px;
+    height: auto;
+}
+
+/* スマホ対応　 ------------------------------------------------------- */
+@media (max-width: 440px) {
+
+    /* ハンバーガーメニュー -------------------------------------------- */
+    .openbtn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* Loading画面 ------------------------------------------------------------ */
+    #splash {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 999;
+        background: #6FBF8F;
+        text-align: center;
+        color: #393939;
+    }
+
+    /* Loading画像中央配置　*/
+    #splash_logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Loading アイコンの大きさ設定　*/
+    #splash_logo img {
+        width: 300px;
+    }
+
+    /* fadeUpをするアイコンの動き */
+    .fadeUp {
+        animation-name: fadeUpAnime;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    @keyframes fadeUpAnime {
+        from {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ヘッダー----------------------------------------------------------------- */
+    #header-wrapper {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+    }
+
+    /* 点線 */
+    .hero-line {
+        display: none;
+    }
+
+    .header-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 70%;
+        margin: 120px 0;
+    }
+
+    .header-nav li {
+        width: fit-content;
+        height: auto;
+        margin: auto;
+        text-align: center;
+        line-height: .7;
+    }
+
+    .header-nav li a {
+        color: #E4F7EB;
+        text-shadow: 4px 4px 4px rgba(79, 158, 123, 0.8);
+        font-size: 40px;
+        font-family: "Caveat", serif;
+        font-weight: 700;
+        transition: .4s;
+    }
+
+    .header-nav li a:hover {
+        color: #FFE479;
+    }
+
+
+    /* ナビゲーションメニューのスタイル（モバイル用） */
+    #nav-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: #6FBF8F;
+        text-shadow: 4px 4px 4px rgba(79, 158, 123, 0.8);
+        z-index: 100;
+    }
+
+    #nav-menu.active {
+        display: block;
+    }
+
+    #nav-menu ul li {
+        text-align: center;
+    }
+
+    #nav-menu ul li a {
+        color: #E4F7EB;
+        font-weight: 700px;
+        font-size: 40px;
+    }
+
+
+    /* ヒーローエリア ---------------------------------------------------------- */
+    #hero-area {
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/hero-sp.JPEG);
+        background-position: top;
+        background-size: cover;
+    }
+
+
+    /* ヒーローエリアに重ねる */
+    .kasaneru {
+        position: relative;
+        width: 100%;
+    }
+
+    /* ヒーローエリアに重ねる文字 */
+    .kasaneru img {
+        display: none;
+    }
+
+    .sp-header {
+        position: fixed;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 80px;
+        /* background-color: #6FBF8F; */
+    }
+
+    .sp-logo {
+        display: block;
+        width: auto;
+        height: 100%;
+        margin-left: 20px;
+        padding: 15px 0;
+    }
+
+
+    /* メインコンテンツ共通 ------------------------------------------------------------ */
+    /* 背景の破線囲み */
+    .background-line {
+        height: auto;
+        margin: 0;
+        padding: 10px;
+        border: 10px double #E4F7EB;
+        border-radius: 20px;
+    }
+
+    /* view more */
+    .more {
+        width: 130px;
+        height: 40px;
+        background-color: #FFE479;
+        border-radius: 50px;
+        border: 1px solid #000000;
+        font-size: 13px;
+        transition: .4s;
+    }
+
+    .more-display {
+        display: flex;
+        justify-content: space-between;
+        width: 80px;
+        margin: auto;
+    }
+
+    .more a {
+        display: flex;
+        margin: auto;
+        color: #393939;
+    }
+
+    .more:hover {
+        background-color: #E4F7EB;
+        border: 1px solid #4F9E7B;
+    }
+
+    .more img {
+        width: 13px;
+        aspect-ratio: 1/1;
+    }
+
+    /* work ----------------------------------------------------------------- */
+    #work {
+        width: 90%;
+        margin: 80px auto 0 auto;
+        padding: 20px;
+        background: #6FBF8F;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* more中央寄せ */
+    .display-center {
+        margin: 0 auto;
+    }
+
+    /* タイトル */
+    .h2 {
+        margin: 10px 0;
+        text-align: center;
+        color: #393939;
+    }
+
+    h2 {
+        font-family: "Caveat", serif;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: .7;
+    }
+
+    /* タイトルの小文字 */
+    .h2 span {
+        font-size: 15px;
+    }
+
+    /* 作品 */
+    .work-item {
+        margin-bottom: 50px;
+    }
+
+    /* displayで横並び */
+    .display {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100px;
+    }
+
+    /* デザイン(SPあり) */
+    .pc-img01 {
+        width: auto;
+        height: 100%;
+        border-radius: 10px;
+        border: 1px solid black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .sp-img01 {
+        width: auto;
+        height: 100%;
+        border-radius: 10px;
+        border: 1px solid black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* デザイン(SPなし) */
+    .pc-img02 {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        border: 1px solid black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* 作品詳細 */
+    .work-note {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    /* 作成年 */
+    .year {
+        font-size: 15px;
+    }
+
+    /* 作品名 */
+    .work-name {
+        font-size: 18px;
+    }
+
+    /* プロフィール --------------------------------------------------------------- */
+    #profile {
+        width: 90%;
+        padding: 20px;
+        margin: 80px auto 100px auto;
+        background: #6FBF8F;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #profile .display {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-img {
+        width: 80%;
+        aspect-ratio: 1/1;
+        margin: 0 auto;
+    }
+
+    .profile-note {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .my-name {
+        margin-bottom: 10px;
+        font-weight: normal;
+        font-size: 25px;
+    }
+
+    .my-name span {
+        font-size: 12px;
+    }
+
+    .profile-more {
+        font-size: 17px;
+    }
+
+    /* more 右寄せ */
+    .display-right {
+        margin: 50px auto 0 auto;
+    }
+
+    /* フッター-------------------------------------------------------------------- */
+    .footer-section {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    #footer {
+        width: 100%;
+        height: auto;
+        background-color: #393939;
+        font-size: 17px;
+    }
+
+    .small-text {
+        padding: 50px;
+        text-align: center;
+        font-size: 13px;
+        color: #E4F7EB;
+    }
+
+    /* 背景の図形 ------------------------------------------------- */
+    .background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -100;
+    }
+
+    .circle01,
+    .circle02 {
+        display: none;
+    }
+
+    .background-img01 {
+        position: absolute;
+        top: 750px;
+        right: 0;
+        z-index: -10;
+        width: 250px;
+        height: auto;
+    }
+
+    .background-img02 {
+        position: absolute;
+        bottom: 700px;
+        left: 0;
+        z-index: -10;
+        width: 250px;
+        height: auto;
+    }
+
+    .background-img03 {
+        position: absolute;
+        bottom: 110px;
+        right: 0;
+        z-index: -10;
+        width: 300px;
+        height: auto;
+    }
+}

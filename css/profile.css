@@ -1,0 +1,329 @@
+@charset "utf-8";
+
+/* profile ----------------------------------------------------------------- */
+#profile {
+    width: 75%;
+    margin: 150px auto 200px auto;
+}
+
+/* 作品 */
+.profile-item {
+    margin-bottom: 150px;
+}
+
+/* displayで横並び */
+.display {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+
+/* 受賞display */
+.profile-display{
+    display: flex;
+}
+
+/* 氏名 */
+.my-name {
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-size: 50px;
+}
+
+.my-name span {
+    font-size: 30px;
+}
+
+/* 顔写真 */
+.profile-img {
+    width: 320px;
+    aspect-ratio: 1/1;
+    background-image: url(../images/photo.JPEG);
+    background-size: cover;
+    background-position: left;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile-note {
+    margin: auto 0 auto 50px;
+}
+
+.profile-contest{
+    width: 300px;
+}
+
+.profile-more {
+    width: 90px;
+    font-size: 30px;
+}
+
+.profile-more2 {
+    width: 670px;
+    font-size: 30px;
+}
+
+.profile01 {
+    margin-bottom: 20px;
+}
+
+/* タイムライン ------------------------------------------------------------------- */
+.timeline {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* タイムラインの縦線 */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 160px;
+    width: 4px;
+    background-color: #4F9E7B;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 80px 0;
+    padding-left: 80px;
+}
+
+/* 丸いマーカー */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 150px;
+    top: 15px;
+    width: 22px;
+    aspect-ratio: 1/1;
+    background-color: #4F9E7B;
+    border-radius: 50%;
+}
+
+/* 年のデザイン */
+.year {
+    font-size: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* 本文のデザイン */
+.content {
+    position: relative;
+    left: 120px;
+    width: fit-content;
+    font-size: 30px;
+    color: #393939;
+}
+
+/* 使用可能なツール・言語 ----------------------------------------------------------------- */
+.word-note {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.word-title {
+    font-size: 35px;
+}
+
+/* ツール・言語名 */
+.word {
+    font-size: 30px;
+    line-height: 1.7;
+}
+
+/* 作品名 */
+.work-name {
+    font-size: 35px;
+}
+
+/* 作品概要 */
+.overview {
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.overview-title {
+    font-size: 30px;
+}
+
+/* 背景の図形 ------------------------------------------------- */
+.circle01 {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    width: 300px;
+    aspect-ratio: 1/1;
+    background-color: #FFE479;
+    border-radius: 50%;
+}
+
+.circle02 {
+    position: absolute;
+    top: 800px;
+    right: 20px;
+    z-index: -10;
+    width: 400px;
+    aspect-ratio: 1/1;
+    background-color: #94D6B3;
+    border-radius: 50%;
+}
+
+.background-img01 {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    z-index: -10;
+    width: 800px;
+    height: auto;
+}
+
+@media (max-width:440px) {
+
+    /* profile ----------------------------------------------------------------- */
+    #profile {
+        width: 90%;
+        margin: 80px auto 100px auto;
+    }
+
+    /* 作品 */
+    .profile-item {
+        margin-bottom: 150px;
+    }
+
+    /* displayで横並び */
+    .display {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    /* 氏名 */
+    .my-name {
+        margin: 15px 0;
+        font-size: 30px;
+    }
+
+    .my-name span {
+        font-size: 15px;
+    }
+
+    /* 顔写真 */
+    .profile-img {
+        width: 100%;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .profile-note {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .profile-more {
+        font-size: 20px;
+    }
+
+    .profile01 {
+        margin-bottom: 10px;
+    }
+
+    /* タイムライン ------------------------------------------------------------------- */
+    .timeline {
+        position: relative;
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        /* padding: 10px; */
+    }
+
+    /* タイムラインの縦線 */
+    .timeline::before {
+        display: none;
+    }
+
+    /* 丸いマーカー */
+    .timeline-item::before {
+        display: none;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin: 20px 0;
+        padding-left: 80px;
+    }
+
+
+    /* 年のデザイン */
+    .year {
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    /* 本文のデザイン */
+    .content {
+        position: relative;
+        left: 0;
+        width: fit-content;
+        margin-left: 20px;
+        font-size: 20px;
+        color: #393939;
+    }
+
+    /* 使用可能なツール・言語 ----------------------------------------------------------------- */
+    .word-note {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .word-title {
+        font-size: 20px;
+    }
+
+    /* ツール・言語名 */
+    .word {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    /* 背景の図形 ------------------------------------------------- */
+    .circle01 {
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        width: 100px;
+        aspect-ratio: 1/1;
+        background-color: #FFE479;
+        border-radius: 50%;
+    }
+
+    .circle02 {
+        position: absolute;
+        top: 800px;
+        right: 20px;
+        z-index: -10;
+        width: 200px;
+        aspect-ratio: 1/1;
+        background-color: #94D6B3;
+        border-radius: 50%;
+    }
+
+    .background-img01 {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        z-index: -10;
+        width: 300px;
+        height: auto;
+    }
+}

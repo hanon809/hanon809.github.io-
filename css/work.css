@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+/* work ----------------------------------------------------------------- */
+#work {
+    width: 1000px;
+    margin: 150px auto 200px auto;
+}
+
+/* 作品 */
+.work-item {
+    margin-bottom: 150px;
+}
+
+/* displayで横並び */
+.display {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 380px;
+    margin: 0 0 40px 0;
+}
+
+/* デザイン(SPあり) */
+.pc-img01 {
+    width: auto;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sp-img01 {
+    width: auto;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* デザイン(SPなし) */
+.pc-img02 {
+    width: 100%;
+    height: auto;
+    margin: 0 0 20px 0;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*アコーディオン全体*/
+.accordion-area {
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+    background: #94D6B3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.accordion-area li {
+    margin: 10px 0;
+}
+
+.accordion-area section {
+    border: 1px solid #333;
+}
+
+/*アコーディオンタイトル*/
+.title {
+    position: relative;
+    /*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 30px 0 30px 70px;
+    transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+
+}
+
+.title::before {
+    top: 48%;
+    left: 30px;
+    transform: rotate(0deg);
+
+}
+
+.title::after {
+    top: 48%;
+    left: 30px;
+    transform: rotate(90deg);
+
+}
+
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before {
+    transform: rotate(45deg);
+}
+
+.title.close::after {
+    transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+    display: none;
+    /*はじめは非表示*/
+    /* background: #f3f3f3; */
+    margin: 0 30px 0 30px;
+    padding: 3%;
+}
+
+/* 作品詳細 */
+.work-note {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* 作成年 */
+.year {
+    font-size: 25px;
+}
+
+/* 作品名 */
+.work-name {
+    font-size: 35px;
+    font-weight: normal;
+}
+
+/* クリックしたら作品に飛ぶ　ホバー */
+.work-name a {
+    transition: .4s;
+}
+
+.work-name a:hover {
+    color: #fff;
+}
+
+/* 作品概要 */
+.overview1 {
+    margin-bottom: 1rem;
+    font-size: 25px;
+    line-height: 1.8;
+}
+
+.overview2 {
+    font-size: 25px;
+    line-height: 1.8;
+}
+
+.overview-title {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+/* 背景の図形 ------------------------------------------------- */
+.circle01 {
+    position: absolute;
+    top: 600px;
+    left: 20px;
+    z-index: -10;
+    width: 400px;
+    aspect-ratio: 1/1;
+    background-color: #BFECD6;
+    border-radius: 50%;
+}
+
+.circle02 {
+    position: absolute;
+    top: 1300px;
+    right: 20px;
+    z-index: -10;
+    width: 300px;
+    aspect-ratio: 1/1;
+    background-color: #94D6B3;
+    border-radius: 50%;
+}
+
+.circle03 {
+    position: absolute;
+    top: 2000px;
+    left: 20px;
+    z-index: -10;
+    width: 400px;
+    aspect-ratio: 1/1;
+    background-color: #BFECD6;
+    border-radius: 50%;
+}
+
+.background-img01 {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    z-index: -10;
+    width: 700px;
+    height: auto;
+}
+
+.background-img02 {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    z-index: -10;
+    width: 800px;
+    height: 250px;
+}
+
+@media (max-width:440px) {
+    #work {
+        width: 75%;
+        margin: 80px auto 100px auto;
+    }
+
+    /* 作品 */
+    .work-item {
+        margin-bottom: 150px;
+    }
+
+    /* displayで横並び */
+    .display {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 105px;
+    }
+
+    /* デザイン(SPあり) */
+    .pc-img01 {
+        width: auto;
+        height: 100%;
+        border-radius: 10px;
+        border: 1px solid black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .sp-img01 {
+        width: auto;
+        height: 100%;
+        border-radius: 10px;
+        border: 1px solid black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* デザイン(SPなし) */
+    .pc-img02 {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* 作品詳細 */
+    .work-note {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    /* 作成年 */
+    .year {
+        font-size: 13px;
+    }
+
+    /* 作品名 */
+    .work-name {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    /* クリックしたら作品に飛ぶ　ホバー */
+    .work-name a {
+        transition: .4s;
+    }
+
+    .work-name a:hover {
+        color: #4F9E7B;
+    }
+
+    .work-name .sp-link {
+        display: block;
+    }
+
+    /* 作品概要 */
+    .overview-title {
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .overview {
+        margin-top: 15px;
+        font-size: 17px;
+    }
+
+    /* 背景の図形 ------------------------------------------------- */
+    .circle01 {
+        position: absolute;
+        top: 400px;
+        left: 20px;
+        z-index: -10;
+        width: 150px;
+        aspect-ratio: 1/1;
+        background-color: #BFECD6;
+        border-radius: 50%;
+    }
+
+    .circle02 {
+        position: absolute;
+        top: 850px;
+        right: 20px;
+        z-index: -10;
+        width: 100px;
+        aspect-ratio: 1/1;
+        background-color: #94D6B3;
+        border-radius: 50%;
+    }
+
+    .circle03 {
+        position: absolute;
+        top: 1400px;
+        left: 20px;
+        z-index: -10;
+        width: 200px;
+        aspect-ratio: 1/1;
+        background-color: #BFECD6;
+        border-radius: 50%;
+    }
+
+    .background-img01 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -10;
+        width: 250px;
+        height: auto;
+    }
+
+    .background-img02 {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        z-index: -10;
+        width: 100%;
+        height: 150px;
+    }
+}
