@@ -80,7 +80,7 @@ body {
 .header-nav li a {
     color: #E4F7EB;
     text-shadow: 4px 4px 4px rgba(79, 158, 123, 0.8);
-    font-size: 40px;
+    font-size: 3rem;
     font-family: "Caveat", serif;
     font-weight: 700;
     transition: .4s;
@@ -136,13 +136,13 @@ body {
 h2 {
     font-family: "Caveat", serif;
     font-weight: 700;
-    font-size: 70px;
+    font-size: 4.5rem;
     line-height: .7;
 }
 
 /* タイトルの小文字 */
 .h2 span {
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 /* フッター-------------------------------------------------------------------- */
@@ -156,13 +156,13 @@ h2 {
     width: 100%;
     height: auto;
     background-color: #393939;
-    font-size: 17px;
+    font-size: 1rem;
 }
 
 .small-text {
     padding: 50px;
     text-align: center;
-    font-size: 15px;
+    font-size: .8rem;
     color: #E4F7EB;
 }
 
