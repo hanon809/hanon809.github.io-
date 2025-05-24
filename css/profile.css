@@ -110,7 +110,7 @@
 
 /* 年のデザイン */
 .year {
-    font-size: 30px;
+    font-size: 1.8rem;
     position: absolute;
     left: 0;
     top: 0;
@@ -121,7 +121,7 @@
     position: relative;
     left: 120px;
     width: fit-content;
-    font-size: 30px;
+    font-size: 1.8rem;
     color: #393939;
 }
 
@@ -132,12 +132,12 @@
 }
 
 .word-title {
-    font-size: 35px;
+    font-size: 2rem;
 }
 
 /* ツール・言語名 */
 .word {
-    font-size: 30px;
+    font-size: 1.8px;
     line-height: 1.7;
 }
 
