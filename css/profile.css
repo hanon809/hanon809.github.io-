@@ -141,21 +141,6 @@
     line-height: 1.7;
 }
 
-/* 作品名 */
-.work-name {
-    font-size: 35px;
-}
-
-/* 作品概要 */
-.overview {
-    margin-top: 15px;
-    font-size: 25px;
-}
-
-.overview-title {
-    font-size: 30px;
-}
-
 /* 背景の図形 ------------------------------------------------- */
 .circle01 {
     position: absolute;
