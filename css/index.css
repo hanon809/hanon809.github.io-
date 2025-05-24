@@ -359,16 +359,17 @@ h2 {
 
 .my-name {
     margin-bottom: 30px;
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: normal;
 }
 
 .my-name span {
-    font-size: 30px;
+    font-size: 1.8rem;
 }
 
 .profile-more {
-    font-size: 30px;
+    font-size: 1.8rem;
+    line-height: 1.7;
 }
 
 /* more 右寄せ */
@@ -387,13 +388,13 @@ h2 {
     width: 100%;
     height: auto;
     background-color: #393939;
-    font-size: 17px;
+    font-size: 1rem;
 }
 
 .small-text {
     padding: 50px;
     text-align: center;
-    font-size: 15px;
+    font-size: .8rem;
     color: #E4F7EB;
 }
 
