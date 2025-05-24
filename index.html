@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Yamazaki Hanon</title>
+</head>
+
+<body>
+    <div id="splash">
+        <div id="splash_logo"><img src="images/logo.png" class="fadeUp" alt="loading"></div>
+    </div>
+    <div id="container">
+    </div>
+    <header id="header-wrapper">
+        <!-- ハンバーガーメニューのボタン -->
+        <div class="openbtn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="sp-header">
+            <img class="sp-logo" src="images/logo.png">
+            <!-- 右寄せナビ -->
+            <nav id="nav-menu">
+                <ul class="header-nav">
+                    <li><a href="#hero-area">Top</a></li>
+                    <li><a href="profile.html#header-warraper">Profile</a></li>
+                    <li><a href="work.html#header-warraper">Work</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- 左寄せヒーローエリア -->
+        <div class="kasaneru">
+            <div class="hero-line">
+            </div>
+            <div id="hero-area">
+            </div>
+            <img src="images/logo.png" alt="logo">
+        </div>
+    </header>
+
+    <div>
+        <main>
+            <!-- 作品一覧エリア -->
+            <section id="work" class="fadein">
+                <div class="background-line">
+                    <div class="h2">
+                        <h2>Work</h2><span>作品一覧</span>
+                    </div>
+                    <!-- 作品 -->
+                    <div class="work-item work01">
+                        <div>
+                            <img class="pc-img02" src="images/work03-pc.png">
+                        </div>
+                        <div class="work-note">
+                            <p class="year">2025年</p>
+                            <p class="work-name">Boulangerie HAL (授業内課題)</p>
+                        </div>
+                    </div>
+                    <div class="work-item work02">
+                        <div class="display">
+                            <img class="pc-img01" src="images/work01-pc.png">
+                            <img class="sp-img01" src="images/work01-sp.png">
+                        </div>
+                        <div class="work-note">
+                            <p class="year">2024年</p>
+                            <p class="work-name">チアダンスチーム CHEER JUCIE</p>
+                        </div>
+                    </div>
+                    <!-- view more -->
+                    <div class="more display-center">
+                        <a href="work.html#header-wrapper" class="more-display">
+                            <p>view more</p>
+                            <img src="images/arrow.png">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- プロフィールエリア -->
+            <section id="profile" class="fadein">
+                <div class="background-line">
+                    <div class="h2">
+                        <h2>Profile</h2><span>プロフィール</span>
+                    </div>
+                    <!-- プロフィール -->
+                    <div class="display">
+                        <img class="profile-img">
+                        <div class="profile-note">
+                            <h3 class="my-name">山崎 葉音 <span>(やまざき はのん)</span></h3>
+                            <p class="profile-more">愛知県出身<br>HAL名古屋WEB学科在学中</p>
+                            <p class="profile-more">実家で犬を飼っている</p>
+                        </div>
+                    </div>
+                    <div class="more display-right">
+                        <a href="profile.html#header-wrapper" class="more-display">
+                            <p>view more</p>
+                            <img src="images/arrow.png">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- jQuery -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <!-- 自作のjs -->
+            <script src="js/index.js"></script>
+
+            <!-- 背景の図形 -->
+            <div class="background">
+                <div class="background-shapes">
+                    <div class="circle01"></div>
+                    <div class="circle02"></div>
+                    <img class="background-img01" src="images/vector01-01.png">
+                    <img class="background-img02" src="images/vector01-02.png">
+                    <img class="background-img03" src="images/vector01-03.png">
+                </div>
+            </div>
+        </main>
+        <!-- フッターエリア -->
+        <section class="footer-section">
+            <footer id="footer">
+                <p class="small-text">©Yamazaki Hanon</p>
+            </footer>
+        </section>
+    </div>
+</body>
+
+</html>
