@@ -93,7 +93,7 @@
 .timeline-item {
     position: relative;
     margin: 80px 0;
-    padding-left: 70px;
+    padding-left: 75px;
 }
 
 /* 丸いマーカー */
@@ -101,7 +101,7 @@
     content: "";
     position: absolute;
     left: 150px;
-    top: 12px;
+    top: 10px;
     width: 22px;
     aspect-ratio: 1/1;
     background-color: #4F9E7B;
